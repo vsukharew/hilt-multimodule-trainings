@@ -1,4 +1,4 @@
-package vsukharew.multimodule.order
+package vsukharew.multimodule.order.email
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +13,8 @@ import dagger.hilt.EntryPoints
 import dagger.hilt.android.AndroidEntryPoint
 import vsukharew.multimodule.order.R
 import vsukharew.multimodule.order.databinding.FragmentEmailBinding
+import vsukharew.multimodule.order.flow.di.OrderFlowComponentHolder
+import vsukharew.multimodule.order.flow.di.OrderFlowEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint

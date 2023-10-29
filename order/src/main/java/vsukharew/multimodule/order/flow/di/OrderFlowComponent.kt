@@ -1,4 +1,4 @@
-package vsukharew.multimodule.order
+package vsukharew.multimodule.order.flow.di
 
 import dagger.hilt.DefineComponent
 import dagger.hilt.components.SingletonComponent

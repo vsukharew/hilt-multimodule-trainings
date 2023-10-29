@@ -1,4 +1,4 @@
-package vsukharew.multimodule.order
+package vsukharew.multimodule.order.address
 
 import androidx.lifecycle.ViewModel
 import com.github.terrakok.cicerone.Router

@@ -1,11 +1,11 @@
-package vsukharew.multimodule.order
+package vsukharew.multimodule.order.flow
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 
-object EmailScreen : FragmentScreen {
+class OrderFlowScreen : FragmentScreen {
     override fun createFragment(factory: FragmentFactory): Fragment {
-        return EmailFragment()
+        return OrderFlowFragment()
     }
 }

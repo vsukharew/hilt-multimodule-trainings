@@ -1,4 +1,4 @@
-package vsukharew.multimodule.order
+package vsukharew.multimodule.order.address
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory

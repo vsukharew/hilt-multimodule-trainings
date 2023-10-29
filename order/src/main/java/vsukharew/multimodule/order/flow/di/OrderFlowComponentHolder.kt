@@ -1,4 +1,4 @@
-package vsukharew.multimodule.order
+package vsukharew.multimodule.order.flow.di
 
 import javax.inject.Inject
 import javax.inject.Singleton

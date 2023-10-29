@@ -1,4 +1,4 @@
-package vsukharew.multimodule.order
+package vsukharew.multimodule.order.flow
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,7 +11,10 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import dagger.hilt.EntryPoints
 import dagger.hilt.android.AndroidEntryPoint
+import vsukharew.multimodule.order.R
 import vsukharew.multimodule.order.databinding.FragmentOrderFlowBinding
+import vsukharew.multimodule.order.flow.di.OrderFlowComponentHolder
+import vsukharew.multimodule.order.flow.di.OrderFlowEntryPoint
 import vsukharew.multimodule.ui.BaseFlowFragment
 import javax.inject.Inject
 

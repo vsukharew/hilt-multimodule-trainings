@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.github.terrakok.cicerone.Router
 import dagger.hilt.android.lifecycle.HiltViewModel
 import vsukharew.multimodule.registration.flow.RegistrationFlowScreen
-import vsukharew.multimodule.order.OrderFlowScreen
+import vsukharew.multimodule.order.flow.OrderFlowScreen
 import javax.inject.Inject
 
 @HiltViewModel
