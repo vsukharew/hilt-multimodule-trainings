@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "vsukharew.multimodule.di"
+    namespace = "vsukharew.multimodule.data"
     compileSdk = 33
 
     defaultConfig {
@@ -36,7 +36,8 @@ android {
 }
 
 dependencies {
-    implementation(libs.android.core.ktx)
+    implementation(project(":core-api:data"))
+    implementation(libs.android.fragment.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)
     implementation(libs.hilt.library)

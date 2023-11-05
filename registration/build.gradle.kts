@@ -41,8 +41,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:di"))
-    implementation(project(":core:ui"))
+    implementation(project(":core-impl:di"))
+    implementation(project(":core-impl:ui"))
     implementation(libs.android.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)

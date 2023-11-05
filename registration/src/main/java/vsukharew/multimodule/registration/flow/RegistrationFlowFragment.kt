@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.AbstractSavedStateViewModelFactory
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import com.github.terrakok.cicerone.NavigatorHolder
 import dagger.hilt.EntryPoints
 import dagger.hilt.android.AndroidEntryPoint
 import vsukharew.multimodule.registration.R
@@ -60,7 +61,8 @@ class RegistrationFlowFragment :
         }
     }
 
-    override val navigatorHolder by lazy { entryPoint.navigatorHolder() }
+    @Inject
+    override lateinit var navigatorHolder: NavigatorHolder
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

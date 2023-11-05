@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.AbstractSavedStateViewModelFactory
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import com.github.terrakok.cicerone.NavigatorHolder
 import dagger.hilt.EntryPoints
 import dagger.hilt.android.AndroidEntryPoint
 import vsukharew.multimodule.order.R
@@ -41,7 +42,7 @@ class OrderFlowFragment : BaseFlowFragment<OrderFlowViewModel>(R.layout.fragment
     lateinit var orderFlowComponentHolder: OrderFlowComponentHolder
 
     override val containerId: Int = R.id.order_flow_container_id
-    override val viewModel by viewModels<OrderFlowViewModel> {
+    override val viewModel by viewModels<OrderFlowViewModel>()  {
         object : AbstractSavedStateViewModelFactory(this@OrderFlowFragment, arguments) {
             override fun <T : ViewModel> create(
                 key: String,

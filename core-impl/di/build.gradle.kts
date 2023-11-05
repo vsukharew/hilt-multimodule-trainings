@@ -2,10 +2,12 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.kotlin.gradle.plugin)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "vsukharew.multimodule.data"
+    namespace = "vsukharew.multimodule.di"
     compileSdk = 33
 
     defaultConfig {
@@ -34,10 +36,13 @@ android {
 }
 
 dependencies {
-
-    implementation(libs.android.fragment.ktx)
+    implementation(project(":core-impl:data"))
+    implementation(project(":core-api:data"))
+    implementation(libs.android.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)
+    implementation(libs.hilt.library)
+    kapt(libs.hilt.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.junit)
     androidTestImplementation(libs.androidx.test.espresso)

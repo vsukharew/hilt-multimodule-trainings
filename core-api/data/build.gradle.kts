@@ -2,12 +2,10 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.kotlin.gradle.plugin)
-    id("kotlin-kapt")
-    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "vsukharew.multimodule.order"
+    namespace = "vsukharew.multimodule.coreapi.data"
     compileSdk = 33
 
     defaultConfig {
@@ -16,9 +14,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
-    buildFeatures {
-        viewBinding = true
-    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -38,16 +34,10 @@ android {
 }
 
 dependencies {
-    implementation(project(":core-api:data"))
-    implementation(project(":core-impl:di"))
-    implementation(project(":core-impl:ui"))
+
     implementation(libs.android.core.ktx)
-    implementation(libs.android.fragment.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)
-    implementation(libs.cicerone)
-    implementation(libs.hilt.library)
-    kapt(libs.hilt.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.junit)
     androidTestImplementation(libs.androidx.test.espresso)

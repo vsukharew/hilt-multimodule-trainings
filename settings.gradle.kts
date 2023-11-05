@@ -16,8 +16,9 @@ dependencyResolutionManagement {
 rootProject.name = "hilt-multimodule-trainings"
 include(":app")
 include(":order")
-include(":core")
-include(":core:data")
+include(":core-impl")
+include(":core-impl:data")
 include(":registration")
-include(":core:di")
-include(":core:ui")
+include(":core-impl:di")
+include(":core-impl:ui")
+include(":core-api:data")
