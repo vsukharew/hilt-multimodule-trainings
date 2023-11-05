@@ -17,4 +17,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fragment_main_menu_registration_flow_btn"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_main_menu_calendar_btn"/>
 </LinearLayout>

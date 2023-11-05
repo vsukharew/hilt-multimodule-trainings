@@ -3,6 +3,7 @@ package vsukharew.multimodule.hilt
 import androidx.lifecycle.ViewModel
 import com.github.terrakok.cicerone.Router
 import dagger.hilt.android.lifecycle.HiltViewModel
+import vsukharew.multimodule.calendar.CalendarScreen
 import vsukharew.multimodule.registration.flow.RegistrationFlowScreen
 import vsukharew.multimodule.order.flow.OrderFlowScreen
 import javax.inject.Inject
@@ -18,5 +19,9 @@ class MainMenuViewModel @Inject constructor(
 
     fun registration() {
         router.navigateTo(RegistrationFlowScreen())
+    }
+
+    fun calendar() {
+        router.navigateTo(CalendarScreen())
     }
 }

@@ -6,4 +6,5 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="fragment_main_menu_settings_btn">Settings</string>
     <string name="fragment_main_menu_registration_flow_btn">Registration</string>
+    <string name="fragment_main_menu_calendar_btn">Calendar</string>
 </resources>

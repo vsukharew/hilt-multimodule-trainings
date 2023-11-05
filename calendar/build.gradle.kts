@@ -1,23 +1,20 @@
+@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("com.google.dagger.hilt.android")
+    alias(libs.plugins.com.android.library)
+    alias(libs.plugins.kotlin.gradle.plugin)
     id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "vsukharew.multimodule.hilt"
-    compileSdk = 34
+    namespace = "vsukharew.multimodule.calendar"
+    compileSdk = 33
 
     defaultConfig {
-        applicationId = "vsukharew.multimodule.hilt"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-        multiDexEnabled = true
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -33,31 +30,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    packaging {
-        resources {
-            excludes.add("/META-INF/gradle/incremental.annotation.processors")
-        }
-    }
     kotlinOptions {
         jvmTarget = "1.8"
-    }
-    buildFeatures {
-        viewBinding = true
     }
 }
 
 dependencies {
-    implementation(project(":order"))
-    implementation(project(":registration"))
-    implementation(project(":calendar"))
 
     implementation(libs.android.core.ktx)
-    implementation(libs.android.fragment.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)
-    implementation(libs.androidx.multidex)
-    implementation(libs.androidx.constraint.layout)
-    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.android.fragment.ktx)
     implementation(libs.cicerone)
     implementation(libs.hilt.library)
     kapt(libs.hilt.compiler)

@@ -37,6 +37,9 @@ class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {
         binding.registration.setOnClickListener {
             viewModel.registration()
         }
+        binding.calendar.setOnClickListener {
+            viewModel.calendar()
+        }
     }
 
     override fun onDestroyView() {
