@@ -13,6 +13,7 @@ hilt = "2.48"
 kotlin-gradle-plugin = "1.9.0"
 material = "1.9.0"
 navigation-ui-ktx = "2.7.3"
+org-jetbrains-kotlin-jvm = "1.9.0"
 
 [libraries]
 android-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "android-core-ktx" }
@@ -35,3 +36,4 @@ hilt-gradle-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hil
 kotlin-gradle-plugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-gradle-plugin" }
 kotlin-kapt = { id = "kotlin-kapt" }
 com-android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }
