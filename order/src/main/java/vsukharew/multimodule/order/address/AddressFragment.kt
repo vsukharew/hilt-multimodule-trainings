@@ -39,8 +39,7 @@ class AddressFragment : Fragment(R.layout.fragment_address) {
                 )
                 return entryPoint.run {
                     AddressViewModel(
-                        globalRouter(),
-                        profileRepo()
+                        orderFlowNavigation()
                     ) as T
                 }
             }

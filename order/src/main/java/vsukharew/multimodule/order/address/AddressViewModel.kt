@@ -4,16 +4,16 @@ import androidx.lifecycle.ViewModel
 import com.github.terrakok.cicerone.Router
 import dagger.hilt.android.lifecycle.HiltViewModel
 import vsukharew.multimodule.coreapi.data.ProfileRepo
+import vsukharew.multimodule.navigationapi.NavigationApi
+import vsukharew.multimodule.order.flow.OrderFlowDirections
 import javax.inject.Inject
 
-@HiltViewModel
-class AddressViewModel @Inject constructor(
-    private val globalRouter: Router,
-    private val profileRepo: ProfileRepo,
+
+class AddressViewModel(
+    private val navigationApi: NavigationApi<OrderFlowDirections>
 ) : ViewModel() {
 
     fun createOrder() {
-        profileRepo.getProfile()
-        globalRouter.exit()
+        navigationApi.navigateTo(OrderFlowDirections.AddressScreen.Next)
     }
 }

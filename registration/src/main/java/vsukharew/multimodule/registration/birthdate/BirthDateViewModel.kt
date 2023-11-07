@@ -1,13 +1,14 @@
 package vsukharew.multimodule.registration.birthdate
 
 import androidx.lifecycle.ViewModel
-import com.github.terrakok.cicerone.Router
+import vsukharew.multimodule.navigationapi.NavigationApi
+import vsukharew.multimodule.registration.flow.RegistrationFlowDirections
 
 class BirthDateViewModel(
-    private val globalRouter: Router,
+    private val navigationApi: NavigationApi<RegistrationFlowDirections>,
 ) : ViewModel() {
 
     fun signUp() {
-        globalRouter.exit()
+        navigationApi.navigateTo(RegistrationFlowDirections.BirthDateScreen.Next)
     }
 }

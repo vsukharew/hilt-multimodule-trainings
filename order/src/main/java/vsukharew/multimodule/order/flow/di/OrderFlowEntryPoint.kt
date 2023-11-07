@@ -6,6 +6,8 @@ import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import vsukharew.multimodule.coreapi.data.ProfileRepo
 import vsukharew.multimodule.di.Flow
+import vsukharew.multimodule.navigationapi.NavigationApi
+import vsukharew.multimodule.order.flow.OrderFlowDirections
 
 @EntryPoint
 @InstallIn(OrderFlowComponent::class)
@@ -18,4 +20,6 @@ interface OrderFlowEntryPoint {
 
     @Flow
     fun navigatorHolder(): NavigatorHolder
+
+    fun orderFlowNavigation(): NavigationApi<OrderFlowDirections>
 }

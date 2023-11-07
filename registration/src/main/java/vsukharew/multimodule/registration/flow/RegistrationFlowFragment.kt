@@ -23,7 +23,7 @@ import javax.inject.Inject
  */
 @AndroidEntryPoint
 class RegistrationFlowFragment :
-    BaseFlowFragment<RegistrationFlowViewModel>(R.layout.fragment_registration_flow) {
+    BaseFlowFragment<RegistrationFlowDirections, RegistrationFlowViewModel>(R.layout.fragment_registration_flow) {
 
     private var _binding: FragmentRegistrationFlowBinding? = null
 
@@ -52,7 +52,7 @@ class RegistrationFlowFragment :
             ): T {
                 return entryPoint.run {
                     RegistrationFlowViewModel(
-                        flowRouter(),
+                        registrationFlowNavigation(),
                         handle
                     ) as T
                 }

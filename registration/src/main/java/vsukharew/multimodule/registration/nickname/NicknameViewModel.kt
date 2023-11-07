@@ -1,22 +1,18 @@
 package vsukharew.multimodule.registration.nickname
 
 import androidx.lifecycle.ViewModel
-import com.github.terrakok.cicerone.Router
-import dagger.hilt.android.lifecycle.HiltViewModel
-import vsukharew.multimodule.registration.birthdate.BirthDateScreen
-import javax.inject.Inject
+import vsukharew.multimodule.navigationapi.NavigationApi
+import vsukharew.multimodule.registration.flow.RegistrationFlowDirections
 
-@HiltViewModel
-class NicknameViewModel @Inject constructor(
-    private val globalRouter: Router,
-    private val flowRouter: Router,
+class NicknameViewModel(
+    private val navigationApi: NavigationApi<RegistrationFlowDirections>
 ) : ViewModel() {
 
     fun back() {
-        globalRouter.exit()
+        navigationApi.navigateTo(RegistrationFlowDirections.NicknameScreen.Back)
     }
 
     fun next() {
-        flowRouter.navigateTo(BirthDateScreen())
+        navigationApi.navigateTo(RegistrationFlowDirections.NicknameScreen.Next)
     }
 }

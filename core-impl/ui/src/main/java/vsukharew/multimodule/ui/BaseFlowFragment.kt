@@ -9,7 +9,7 @@ import com.github.terrakok.cicerone.Navigator
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.androidx.AppNavigator
 
-abstract class BaseFlowFragment<VM : BaseFlowViewModel>(@LayoutRes layoutResId: Int) :
+abstract class BaseFlowFragment<S, VM : BaseFlowViewModel<S>>(@LayoutRes layoutResId: Int) :
     Fragment(layoutResId) {
 
     @get:IdRes

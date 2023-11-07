@@ -43,6 +43,7 @@ android {
 dependencies {
     implementation(project(":core-impl:di"))
     implementation(project(":core-impl:ui"))
+    implementation(project(":navigation-api"))
     implementation(libs.android.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)

@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-
+    implementation(project(":navigation-api"))
     implementation(libs.android.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)

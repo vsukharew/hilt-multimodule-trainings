@@ -23,7 +23,7 @@ import javax.inject.Inject
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 @AndroidEntryPoint
-class OrderFlowFragment : BaseFlowFragment<OrderFlowViewModel>(R.layout.fragment_order_flow) {
+class OrderFlowFragment : BaseFlowFragment<OrderFlowDirections, OrderFlowViewModel>(R.layout.fragment_order_flow) {
 
     private var _binding: FragmentOrderFlowBinding? = null
 
@@ -51,7 +51,7 @@ class OrderFlowFragment : BaseFlowFragment<OrderFlowViewModel>(R.layout.fragment
             ): T {
                 return entryPoint.run {
                     OrderFlowViewModel(
-                        flowRouter(),
+                        orderFlowNavigation()
                     ) as T
                 }
             }

@@ -41,6 +41,7 @@ dependencies {
     implementation(project(":core-api:data"))
     implementation(project(":core-impl:di"))
     implementation(project(":core-impl:ui"))
+    implementation(project(":navigation-api"))
     implementation(libs.android.core.ktx)
     implementation(libs.android.fragment.ktx)
     implementation(libs.androidx.appcompat)

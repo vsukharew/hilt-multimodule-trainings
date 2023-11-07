@@ -1,15 +1,14 @@
 package vsukharew.multimodule.registration.flow
 
 import androidx.lifecycle.SavedStateHandle
-import com.github.terrakok.cicerone.Router
-import com.github.terrakok.cicerone.androidx.FragmentScreen
-import vsukharew.multimodule.registration.nickname.NicknameScreen
+import vsukharew.multimodule.navigationapi.NavigationApi
 import vsukharew.multimodule.ui.BaseFlowViewModel
 import javax.inject.Inject
 
 class RegistrationFlowViewModel @Inject constructor(
-    flowRouter: Router,
+    navigationApi: NavigationApi<RegistrationFlowDirections>,
     private val savedStateHandle: SavedStateHandle,
-): BaseFlowViewModel(flowRouter) {
-    override val startScreen: FragmentScreen = NicknameScreen()
+): BaseFlowViewModel<RegistrationFlowDirections>(navigationApi) {
+    override val startScreen: RegistrationFlowDirections
+        get() = RegistrationFlowDirections.RegistrationFlowScreen.FirstScreenInFlow
 }

@@ -1,11 +1,12 @@
-package vsukharew.multimodule.calendar
+package vsukharew.multimodule.flownavigationimpl.registration
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
 import com.github.terrakok.cicerone.androidx.FragmentScreen
+import vsukharew.multimodule.registration.nickname.NicknameFragment
 
-class CalendarScreen : FragmentScreen {
+class NicknameScreen : FragmentScreen {
     override fun createFragment(factory: FragmentFactory): Fragment {
-        return CalendarFragment()
+        return NicknameFragment()
     }
 }
