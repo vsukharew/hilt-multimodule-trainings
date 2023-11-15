@@ -2,12 +2,12 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.kotlin.gradle.plugin)
-    id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "vsukharew.multimodule.navigationimpl"
+    namespace = "vsukharew.multimodule.main_menu"
     compileSdk = 33
 
     defaultConfig {
@@ -33,21 +33,20 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation(project(":navigation-api"))
-    implementation(project(":calendar"))
-    implementation(project(":main-menu"))
-    implementation(project(":order"))
-    implementation(project(":registration"))
     implementation(libs.android.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)
-    implementation(libs.cicerone)
+    implementation(libs.android.fragment.ktx)
+    testImplementation(libs.junit)
     implementation(libs.hilt.library)
     kapt(libs.hilt.compiler)
-    testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.junit)
     androidTestImplementation(libs.androidx.test.espresso)
 }
