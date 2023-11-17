@@ -37,9 +37,9 @@ android {
 
 dependencies {
     implementation(project(":navigation-api"))
-    implementation(project(":calendar"))
+    implementation(project(":calendar-impl"))
     implementation(project(":main-menu"))
-    implementation(project(":order"))
+    implementation(project(":order-impl"))
     implementation(project(":registration"))
     implementation(libs.android.core.ktx)
     implementation(libs.androidx.appcompat)

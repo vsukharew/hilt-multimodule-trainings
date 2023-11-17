@@ -12,7 +12,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/calendar" />
+            <option value="$PROJECT_DIR$/calendar-api" />
+            <option value="$PROJECT_DIR$/calendar-impl" />
             <option value="$PROJECT_DIR$/core-api" />
             <option value="$PROJECT_DIR$/core-api/data" />
             <option value="$PROJECT_DIR$/core-impl" />
@@ -23,7 +24,8 @@
             <option value="$PROJECT_DIR$/main-menu" />
             <option value="$PROJECT_DIR$/navigation-api" />
             <option value="$PROJECT_DIR$/navigation-impl" />
-            <option value="$PROJECT_DIR$/order" />
+            <option value="$PROJECT_DIR$/order-api" />
+            <option value="$PROJECT_DIR$/order-impl" />
             <option value="$PROJECT_DIR$/registration" />
           </set>
         </option>

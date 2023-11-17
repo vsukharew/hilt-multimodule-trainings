@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "vsukharew.multimodule.main_menu"
+    namespace = "vsukharew.multimodule.calendar"
     compileSdk = 33
 
     defaultConfig {
@@ -33,22 +33,20 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
-    implementation(project(":navigation-api"))
     implementation(project(":calendar-api"))
-    implementation(project(":order-api"))
     implementation(libs.android.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)
     implementation(libs.android.fragment.ktx)
-    testImplementation(libs.junit)
     implementation(libs.hilt.library)
+    implementation(libs.dagger.library)
+    implementation(libs.cicerone)
     kapt(libs.hilt.compiler)
+    kapt(libs.dagger.compiler)
+    testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.junit)
     androidTestImplementation(libs.androidx.test.espresso)
 }
