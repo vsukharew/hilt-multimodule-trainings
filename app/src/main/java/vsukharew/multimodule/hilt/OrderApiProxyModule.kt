@@ -16,14 +16,14 @@ import vsukharew.multimodule.order_api.OrderApi
 internal object OrderApiProxyModule {
     @Provides
     @ViewModelScoped
-    fun calendarNavigationApiComponent(cicerone: Cicerone<Router>): OrderFlowApiComponent {
+    fun provideOrderFlowApiComponent(cicerone: Cicerone<Router>): OrderFlowApiComponent {
         return DaggerOrderFlowApiComponent.factory()
             .create(cicerone.router)
     }
 
     @Provides
     @ViewModelScoped
-    fun calendarApi(orderFlowComponent: OrderFlowApiComponent): OrderApi {
+    fun provideOrderApi(orderFlowComponent: OrderFlowApiComponent): OrderApi {
         return orderFlowComponent.orderApi()
     }
 }
