@@ -31,8 +31,8 @@ class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.settings.setOnClickListener {
-            viewModel.settings()
+        binding.order.setOnClickListener {
+            viewModel.order()
         }
         binding.registration.setOnClickListener {
             viewModel.registration()

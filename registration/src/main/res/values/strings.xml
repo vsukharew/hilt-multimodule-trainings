@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-    <string name="feature_registration_birth_date_next_btn"></string>
+    <string name="fragment_birthdate_register_btn">Register</string>
     <string name="nickname_hint">Nickname</string>
 </resources>

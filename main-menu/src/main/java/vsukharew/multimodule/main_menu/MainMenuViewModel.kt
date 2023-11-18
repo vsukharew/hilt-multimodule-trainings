@@ -10,7 +10,7 @@ class MainMenuViewModel @Inject constructor(
     private val navigationApi: NavigationApi<MainMenuDirections>
 ) : ViewModel() {
 
-    fun settings() {
+    fun order() {
         navigationApi.navigateTo(MainMenuDirections.MainMenuScreen.ToOrder)
     }
 
