@@ -14,7 +14,7 @@ class MainMenuViewModel @Inject constructor(
     private val calendarApi: CalendarApi
 ) : ViewModel() {
 
-    fun settings() {
+    fun order() {
         orderApi.startOrderFlow()
     }
 
