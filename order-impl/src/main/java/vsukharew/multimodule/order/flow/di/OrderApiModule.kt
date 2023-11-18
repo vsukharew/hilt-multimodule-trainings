@@ -12,6 +12,6 @@ import javax.inject.Singleton
 @DisableInstallInCheck
 interface OrderApiModule {
     @Binds
-    @PerFeature
+    @Singleton
     fun bindOrderFlowNavigation(navigation: OrderNavigation): OrderApi
 }
