@@ -1,15 +1,14 @@
 package vsukharew.multimodule.hilt
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.github.terrakok.cicerone.Navigator
 import com.github.terrakok.cicerone.NavigatorHolder
-import com.github.terrakok.cicerone.Replace
 import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.androidx.AppNavigator
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import vsukharew.multimodule.hilt.databinding.ActivityMainBinding
 import vsukharew.multimodule.navigationimpl.MainMenuScreen
