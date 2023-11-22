@@ -6,7 +6,7 @@ import vsukharew.multimodule.calendar_api.CalendarApi
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [CalendarModule::class], dependencies = [Router::class])
+@Component(modules = [CalendarApiModule::class], dependencies = [Router::class])
 interface CalendarComponent {
     @Component.Factory
     interface Factory {

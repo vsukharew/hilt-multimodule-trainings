@@ -1,3 +1,5 @@
 package vsukharew.multimodule.calendar
 
-interface CalendarInteractor
+interface CalendarInteractor {
+    fun getEventsCount(): Int
+}

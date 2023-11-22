@@ -8,7 +8,12 @@ import javax.inject.Inject
 @HiltViewModel
 class CalendarViewModel @Inject constructor(
     private val router: Router,
+    calendarInteractor: CalendarInteractor,
 ) : ViewModel() {
+
+    init {
+        println("just to ensure that DI works: ${calendarInteractor.getEventsCount()}")
+    }
 
     fun back() {
         router.exit()

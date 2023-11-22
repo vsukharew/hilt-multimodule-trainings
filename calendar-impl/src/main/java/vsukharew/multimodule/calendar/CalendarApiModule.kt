@@ -8,11 +8,7 @@ import javax.inject.Singleton
 
 @Module
 @DisableInstallInCheck
-interface CalendarModule {
-
-    @Binds
-    @Singleton
-    fun bindCalendarInteractor(impl: CalendarInteractorImpl): CalendarInteractor
+interface CalendarApiModule {
 
     @Binds
     @Singleton
