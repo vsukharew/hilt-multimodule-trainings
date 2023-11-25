@@ -42,7 +42,7 @@ android {
 
 dependencies {
     implementation(project(":core-di"))
-    implementation(project(":core-impl:ui"))
+    implementation(project(":core-ui"))
     implementation(project(":registration-api"))
     implementation(libs.android.core.ktx)
     implementation(libs.androidx.appcompat)
