@@ -11,7 +11,7 @@ import com.github.terrakok.cicerone.androidx.AppNavigator
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import vsukharew.multimodule.hilt.databinding.ActivityMainBinding
-import vsukharew.multimodule.navigationimpl.MainMenuScreen
+import vsukharew.multimodule.main_menu.MainMenuScreen
 import javax.inject.Inject
 
 @AndroidEntryPoint

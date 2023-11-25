@@ -39,13 +39,14 @@ android {
 }
 
 dependencies {
-    implementation(project(":navigation-api"))
     implementation(project(":calendar-api"))
     implementation(project(":order-api"))
+    implementation(project(":registration-api"))
     implementation(libs.android.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)
     implementation(libs.android.fragment.ktx)
+    implementation(libs.cicerone)
     testImplementation(libs.junit)
     implementation(libs.hilt.library)
     kapt(libs.hilt.compiler)
