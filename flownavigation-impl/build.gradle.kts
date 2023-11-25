@@ -37,7 +37,7 @@ android {
 
 dependencies {
     implementation(project(":navigation-api"))
-    implementation(project(":core-impl:di"))
+    implementation(project(":core-di"))
     implementation(project(":registration"))
     implementation(project(":order"))
     implementation(libs.android.core.ktx)
