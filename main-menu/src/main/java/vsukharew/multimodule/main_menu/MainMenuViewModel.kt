@@ -2,20 +2,20 @@ package vsukharew.multimodule.main_menu
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import vsukharew.multimodule.calendar_api.CalendarApi
-import vsukharew.multimodule.order_api.OrderApi
+import vsukharew.multimodule.calendar_api.CalendarRouter
+import vsukharew.multimodule.order_api.OrderRouter
 import vsukharew.multimodule.registration_api.RegistrationRouter
 import javax.inject.Inject
 
 @HiltViewModel
 class MainMenuViewModel @Inject constructor(
     private val registrationRouter: RegistrationRouter,
-    private val orderApi: OrderApi,
-    private val calendarApi: CalendarApi
+    private val orderRouter: OrderRouter,
+    private val calendarRouter: CalendarRouter
 ) : ViewModel() {
 
     fun order() {
-        orderApi.startOrderFlow()
+        orderRouter.startOrderFlow()
     }
 
     fun registration() {
@@ -23,6 +23,6 @@ class MainMenuViewModel @Inject constructor(
     }
 
     fun calendar() {
-        calendarApi.startCalendar()
+        calendarRouter.startCalendar()
     }
 }

@@ -2,15 +2,15 @@ package vsukharew.multimodule.calendar
 
 import com.github.terrakok.cicerone.Router
 import dagger.Component
-import vsukharew.multimodule.calendar_api.CalendarApi
+import vsukharew.multimodule.calendar_api.CalendarRouter
 import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [CalendarApiModule::class], dependencies = [Router::class])
-interface CalendarComponent {
+interface CalendarApiComponent {
     @Component.Factory
     interface Factory {
-        fun create(router: Router): CalendarComponent
+        fun create(router: Router): CalendarApiComponent
     }
-    fun calendarApi(): CalendarApi
+    fun calendarRouter(): CalendarRouter
 }

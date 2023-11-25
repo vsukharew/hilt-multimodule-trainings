@@ -9,7 +9,7 @@ import javax.inject.Singleton
 
 @Module
 @DisableInstallInCheck
-interface RegistrationRouterModule {
+interface RegistrationApiModule {
 
     @Binds
     @Singleton

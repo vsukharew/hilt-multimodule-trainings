@@ -7,23 +7,23 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.scopes.ViewModelScoped
-import vsukharew.multimodule.order.flow.di.DaggerOrderFlowApiComponent
-import vsukharew.multimodule.order.flow.di.OrderFlowApiComponent
-import vsukharew.multimodule.order_api.OrderApi
+import vsukharew.multimodule.order.flow.di.DaggerOrderApiComponent
+import vsukharew.multimodule.order.flow.di.OrderApiComponent
+import vsukharew.multimodule.order_api.OrderRouter
 
 @Module
 @InstallIn(ViewModelComponent::class)
 internal object OrderApiProxyModule {
     @Provides
     @ViewModelScoped
-    fun provideOrderFlowApiComponent(cicerone: Cicerone<Router>): OrderFlowApiComponent {
-        return DaggerOrderFlowApiComponent.factory()
+    fun provideOrderFlowApiComponent(cicerone: Cicerone<Router>): OrderApiComponent {
+        return DaggerOrderApiComponent.factory()
             .create(cicerone.router)
     }
 
     @Provides
     @ViewModelScoped
-    fun provideOrderApi(orderFlowComponent: OrderFlowApiComponent): OrderApi {
-        return orderFlowComponent.orderApi()
+    fun provideOrderApi(orderFlowComponent: OrderApiComponent): OrderRouter {
+        return orderFlowComponent.orderRouter()
     }
 }

@@ -3,7 +3,7 @@ package vsukharew.multimodule.calendar
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.migration.DisableInstallInCheck
-import vsukharew.multimodule.calendar_api.CalendarApi
+import vsukharew.multimodule.calendar_api.CalendarRouter
 import javax.inject.Singleton
 
 @Module
@@ -12,5 +12,5 @@ interface CalendarApiModule {
 
     @Binds
     @Singleton
-    fun bindCalendarApi(impl: CalendarNavigation): CalendarApi
+    fun bindCalendarApi(impl: CalendarNavigation): CalendarRouter
 }

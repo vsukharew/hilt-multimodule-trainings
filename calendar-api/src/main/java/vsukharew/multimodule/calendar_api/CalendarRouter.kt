@@ -1,5 +1,5 @@
 package vsukharew.multimodule.calendar_api
 
-interface CalendarApi {
+interface CalendarRouter {
     fun startCalendar()
 }

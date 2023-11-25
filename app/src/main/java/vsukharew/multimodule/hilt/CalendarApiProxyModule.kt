@@ -7,9 +7,9 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.scopes.ViewModelScoped
-import vsukharew.multimodule.calendar.CalendarComponent
-import vsukharew.multimodule.calendar.DaggerCalendarComponent
-import vsukharew.multimodule.calendar_api.CalendarApi
+import vsukharew.multimodule.calendar.CalendarApiComponent
+import vsukharew.multimodule.calendar.DaggerCalendarApiComponent
+import vsukharew.multimodule.calendar_api.CalendarRouter
 
 @Module
 @InstallIn(ViewModelComponent::class)
@@ -17,14 +17,14 @@ internal class CalendarApiProxyModule {
     // Pass as method args any dependencies from :app you need to build component
     @Provides
     @ViewModelScoped
-    fun calendarNavigationApiComponent(cicerone: Cicerone<Router>): CalendarComponent {
-        return DaggerCalendarComponent.factory()
+    fun calendarNavigationApiComponent(cicerone: Cicerone<Router>): CalendarApiComponent {
+        return DaggerCalendarApiComponent.factory()
             .create(cicerone.router)
     }
 
     @Provides
     @ViewModelScoped
-    fun calendarApi(calendarComponent: CalendarComponent): CalendarApi {
-        return calendarComponent.calendarApi()
+    fun calendarApi(calendarApiComponent: CalendarApiComponent): CalendarRouter {
+        return calendarApiComponent.calendarRouter()
     }
 }

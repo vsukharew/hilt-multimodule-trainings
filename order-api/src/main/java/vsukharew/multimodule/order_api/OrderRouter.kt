@@ -1,5 +1,5 @@
 package vsukharew.multimodule.order_api
 
-interface OrderApi {
+interface OrderRouter {
     fun startOrderFlow()
 }

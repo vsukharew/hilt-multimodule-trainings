@@ -6,11 +6,11 @@ import vsukharew.multimodule.registration_api.RegistrationRouter
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [RegistrationRouterModule::class], dependencies = [Router::class])
-interface RegistrationRouterComponent {
+@Component(modules = [RegistrationApiModule::class], dependencies = [Router::class])
+interface RegistrationApiComponent {
     @Component.Factory
     interface Factory {
-        fun create(router: Router): RegistrationRouterComponent
+        fun create(router: Router): RegistrationApiComponent
     }
     fun registrationRouter(): RegistrationRouter
 }
