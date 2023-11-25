@@ -12,5 +12,5 @@ interface CalendarApiModule {
 
     @Binds
     @Singleton
-    fun bindCalendarApi(impl: CalendarNavigation): CalendarRouter
+    fun bindCalendarRouter(impl: CalendarNavigation): CalendarRouter
 }

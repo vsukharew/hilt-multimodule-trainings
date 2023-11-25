@@ -23,7 +23,7 @@ internal object OrderApiProxyModule {
 
     @Provides
     @ViewModelScoped
-    fun provideOrderApi(orderFlowComponent: OrderApiComponent): OrderRouter {
+    fun provideOrderRouter(orderFlowComponent: OrderApiComponent): OrderRouter {
         return orderFlowComponent.orderRouter()
     }
 }

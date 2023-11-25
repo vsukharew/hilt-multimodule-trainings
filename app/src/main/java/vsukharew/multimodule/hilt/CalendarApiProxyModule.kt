@@ -24,7 +24,7 @@ internal class CalendarApiProxyModule {
 
     @Provides
     @ViewModelScoped
-    fun calendarApi(calendarApiComponent: CalendarApiComponent): CalendarRouter {
+    fun calendarRouter(calendarApiComponent: CalendarApiComponent): CalendarRouter {
         return calendarApiComponent.calendarRouter()
     }
 }
