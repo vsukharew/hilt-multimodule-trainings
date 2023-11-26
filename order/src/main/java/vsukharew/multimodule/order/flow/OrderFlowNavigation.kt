@@ -1,4 +1,4 @@
-package vsukharew.multimodule.flownavigationimpl.order
+package vsukharew.multimodule.order.flow
 
 import com.github.terrakok.cicerone.Router
 import vsukharew.multimodule.navigationapi.NavigationApi

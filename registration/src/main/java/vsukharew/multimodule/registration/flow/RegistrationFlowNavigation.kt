@@ -1,9 +1,9 @@
-package vsukharew.multimodule.flownavigationimpl.registration
+package vsukharew.multimodule.registration.flow
 
 import com.github.terrakok.cicerone.Router
 import vsukharew.multimodule.navigationapi.NavigationApi
 import vsukharew.multimodule.registration.birthdate.BirthDateScreen
-import vsukharew.multimodule.registration.flow.RegistrationFlowDirections
+import vsukharew.multimodule.registration.nickname.NicknameScreen
 
 class RegistrationFlowNavigation(
     private val globalRouter: Router,

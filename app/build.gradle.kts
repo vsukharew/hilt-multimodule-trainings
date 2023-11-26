@@ -52,7 +52,6 @@ dependencies {
     implementation(project(":calendar"))
     implementation(project(":navigation-api"))
     implementation(project(":navigation-impl"))
-    implementation(project(":flownavigation-impl"))
 
     implementation(libs.android.core.ktx)
     implementation(libs.android.fragment.ktx)

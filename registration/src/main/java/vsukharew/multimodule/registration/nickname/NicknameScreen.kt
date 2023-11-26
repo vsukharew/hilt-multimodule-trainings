@@ -1,4 +1,4 @@
-package vsukharew.multimodule.flownavigationimpl.registration
+package vsukharew.multimodule.registration.nickname
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
