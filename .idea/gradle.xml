@@ -21,7 +21,6 @@
             <option value="$PROJECT_DIR$/core-ui" />
             <option value="$PROJECT_DIR$/main-menu" />
             <option value="$PROJECT_DIR$/navigation-api" />
-            <option value="$PROJECT_DIR$/navigation-impl" />
             <option value="$PROJECT_DIR$/order" />
             <option value="$PROJECT_DIR$/registration" />
           </set>

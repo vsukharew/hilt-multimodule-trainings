@@ -14,6 +14,7 @@ import dagger.hilt.EntryPoints
 import dagger.hilt.android.AndroidEntryPoint
 import vsukharew.multimodule.order.R
 import vsukharew.multimodule.order.databinding.FragmentOrderFlowBinding
+import vsukharew.multimodule.order.email.EmailScreen
 import vsukharew.multimodule.order.flow.di.OrderFlowComponentHolder
 import vsukharew.multimodule.order.flow.di.OrderFlowEntryPoint
 import vsukharew.multimodule.ui.BaseFlowFragment
@@ -23,7 +24,7 @@ import javax.inject.Inject
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 @AndroidEntryPoint
-class OrderFlowFragment : BaseFlowFragment<OrderFlowDirections, OrderFlowViewModel>(R.layout.fragment_order_flow) {
+class OrderFlowFragment : BaseFlowFragment<EmailScreen, OrderFlowViewModel>(R.layout.fragment_order_flow) {
 
     private var _binding: FragmentOrderFlowBinding? = null
 
@@ -51,7 +52,7 @@ class OrderFlowFragment : BaseFlowFragment<OrderFlowDirections, OrderFlowViewMod
             ): T {
                 return entryPoint.run {
                     OrderFlowViewModel(
-                        orderFlowNavigation()
+                        flowRouter()
                     ) as T
                 }
             }

@@ -6,12 +6,11 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.github.terrakok.cicerone.Navigator
 import com.github.terrakok.cicerone.NavigatorHolder
-import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.androidx.AppNavigator
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import vsukharew.multimodule.hilt.databinding.ActivityMainBinding
-import vsukharew.multimodule.navigationimpl.MainMenuScreen
+import vsukharew.multimodule.navigationapi.MainMenuRouter
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var navigatorHolder: NavigatorHolder
 
     @Inject
-    lateinit var router: Router
+    lateinit var mainMenuRouter: MainMenuRouter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
-        router.replaceScreen(MainMenuScreen())
+        mainMenuRouter.navigateToMainMenu()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

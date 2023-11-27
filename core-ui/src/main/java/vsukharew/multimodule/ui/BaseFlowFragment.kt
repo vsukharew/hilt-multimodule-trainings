@@ -7,8 +7,9 @@ import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.androidx.AppNavigator
+import com.github.terrakok.cicerone.androidx.FragmentScreen
 
-abstract class BaseFlowFragment<S, VM : BaseFlowViewModel<S>>(@LayoutRes layoutResId: Int) :
+abstract class BaseFlowFragment<S : FragmentScreen, VM : BaseFlowViewModel<S>>(@LayoutRes layoutResId: Int) :
     Fragment(layoutResId) {
 
     @get:IdRes

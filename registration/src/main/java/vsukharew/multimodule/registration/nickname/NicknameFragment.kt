@@ -40,7 +40,8 @@ class NicknameFragment : Fragment(R.layout.fragment_nickname) {
                 )
                 return entryPoint.run {
                     NicknameViewModel(
-                        registrationFlowNavigation(),
+                        flowRouter(),
+                        globalRouter()
                     ) as T
                 }
             }

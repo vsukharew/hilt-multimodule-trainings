@@ -51,7 +51,7 @@ dependencies {
     implementation(project(":registration"))
     implementation(project(":calendar"))
     implementation(project(":navigation-api"))
-    implementation(project(":navigation-impl"))
+    implementation(project(":main-menu"))
 
     implementation(libs.android.core.ktx)
     implementation(libs.android.fragment.ktx)

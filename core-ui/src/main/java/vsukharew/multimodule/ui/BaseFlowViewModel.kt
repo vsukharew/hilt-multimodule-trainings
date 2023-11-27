@@ -1,17 +1,16 @@
 package vsukharew.multimodule.ui
 
 import androidx.lifecycle.ViewModel
-import vsukharew.multimodule.navigationapi.NavigationApi
+import com.github.terrakok.cicerone.Router
+import com.github.terrakok.cicerone.androidx.FragmentScreen
 
-abstract class BaseFlowViewModel<S>(
-//    protected val flowRouter: Router,
-    protected val navigationApi: NavigationApi<S>
+abstract class BaseFlowViewModel<S : FragmentScreen>(
+    protected val flowRouter: Router,
 ) : ViewModel() {
 
     abstract val startScreen: S
 
     fun startFlow() {
-        navigationApi.navigateTo(startScreen)
-//        flowRouter.navigateTo(startScreen)
+        flowRouter.navigateTo(startScreen)
     }
 }

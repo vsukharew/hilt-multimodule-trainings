@@ -15,6 +15,7 @@ import vsukharew.multimodule.registration.R
 import vsukharew.multimodule.registration.flow.di.RegistrationFlowEntryPoint
 import vsukharew.multimodule.registration.databinding.FragmentRegistrationFlowBinding
 import vsukharew.multimodule.registration.flow.di.RegistrationFlowComponentHolder
+import vsukharew.multimodule.registration.nickname.NicknameScreen
 import vsukharew.multimodule.ui.BaseFlowFragment
 import javax.inject.Inject
 
@@ -23,7 +24,7 @@ import javax.inject.Inject
  */
 @AndroidEntryPoint
 class RegistrationFlowFragment :
-    BaseFlowFragment<RegistrationFlowDirections, RegistrationFlowViewModel>(R.layout.fragment_registration_flow) {
+    BaseFlowFragment<NicknameScreen, RegistrationFlowViewModel>(R.layout.fragment_registration_flow) {
 
     private var _binding: FragmentRegistrationFlowBinding? = null
 
@@ -52,7 +53,7 @@ class RegistrationFlowFragment :
             ): T {
                 return entryPoint.run {
                     RegistrationFlowViewModel(
-                        registrationFlowNavigation(),
+                        flowRouter(),
                         handle
                     ) as T
                 }

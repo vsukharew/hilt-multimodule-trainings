@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.android.material)
     implementation(libs.android.fragment.ktx)
     implementation(libs.hilt.library)
+    implementation(libs.cicerone)
     kapt(libs.hilt.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.junit)

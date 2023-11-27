@@ -1,12 +1,12 @@
-package vsukharew.multimodule.navigationimpl
+package vsukharew.multimodule.calendar
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
 import com.github.terrakok.cicerone.androidx.FragmentScreen
-import vsukharew.multimodule.main_menu.MainMenuFragment
+import vsukharew.multimodule.calendar.CalendarFragment
 
-class MainMenuScreen : FragmentScreen {
+class CalendarScreen : FragmentScreen {
     override fun createFragment(factory: FragmentFactory): Fragment {
-        return MainMenuFragment()
+        return CalendarFragment()
     }
 }

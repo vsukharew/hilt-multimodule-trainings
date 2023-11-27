@@ -2,17 +2,13 @@ package vsukharew.multimodule.order.email
 
 import androidx.lifecycle.ViewModel
 import com.github.terrakok.cicerone.Router
-import dagger.hilt.android.lifecycle.HiltViewModel
-import vsukharew.multimodule.navigationapi.NavigationApi
 import vsukharew.multimodule.order.address.AddressScreen
-import vsukharew.multimodule.order.flow.OrderFlowDirections
-import javax.inject.Inject
 
 class EmailViewModel(
-    private val navigationApi: NavigationApi<OrderFlowDirections>
+    private val flowRouter: Router,
 ) : ViewModel() {
 
     fun next() {
-        navigationApi.navigateTo(OrderFlowDirections.EmailScreen.Next)
+        flowRouter.navigateTo(AddressScreen)
     }
 }

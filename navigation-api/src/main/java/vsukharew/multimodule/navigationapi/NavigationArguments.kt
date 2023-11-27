@@ -1,0 +1,3 @@
+package vsukharew.multimodule.navigationapi
+
+interface NavigationArguments

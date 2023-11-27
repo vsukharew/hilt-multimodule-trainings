@@ -40,7 +40,7 @@ class EmailFragment : Fragment(R.layout.fragment_email) {
                 )
                 return entryPoint.run {
                     EmailViewModel(
-                        orderFlowNavigation(),
+                        flowRouter(),
                     ) as T
                 }
             }

@@ -37,7 +37,7 @@ class BirthDateFragment : Fragment(R.layout.fragment_birthdate) {
                 )
                 return entryPoint.run {
                     BirthDateViewModel(
-                        registrationFlowNavigation(),
+                        globalRouter(),
                     ) as T
                 }
             }

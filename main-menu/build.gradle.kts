@@ -44,9 +44,10 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.android.material)
     implementation(libs.android.fragment.ktx)
-    testImplementation(libs.junit)
+    implementation(libs.cicerone)
     implementation(libs.hilt.library)
     kapt(libs.hilt.compiler)
+    testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.junit)
     androidTestImplementation(libs.androidx.test.espresso)
 }
