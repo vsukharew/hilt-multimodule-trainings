@@ -6,7 +6,7 @@ import vsukharew.multimodule.di.PerFeature
 
 @PerFeature
 @DefineComponent(parent = SingletonComponent::class)
-interface RegistrationFlowComponent {
+internal interface RegistrationFlowComponent {
     @DefineComponent.Builder
     interface Builder {
         fun build(): RegistrationFlowComponent

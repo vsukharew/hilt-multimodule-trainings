@@ -10,7 +10,7 @@ import vsukharew.multimodule.di.PerFeature
 
 @Module
 @InstallIn(RegistrationFlowComponent::class)
-object InnerNavigationModule {
+internal object InnerNavigationModule {
     @Provides
     @PerFeature
     @Flow

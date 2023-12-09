@@ -8,7 +8,7 @@ import vsukharew.multimodule.di.Flow
 
 @EntryPoint
 @InstallIn(RegistrationFlowComponent::class)
-interface RegistrationFlowEntryPoint {
+internal interface RegistrationFlowEntryPoint {
     fun globalRouter(): Router
 
     @Flow

@@ -6,7 +6,7 @@ import vsukharew.multimodule.registration.nickname.NicknameScreen
 import vsukharew.multimodule.ui.BaseFlowViewModel
 import javax.inject.Inject
 
-class RegistrationFlowViewModel @Inject constructor(
+internal class RegistrationFlowViewModel @Inject constructor(
     flowRouter: Router,
     private val savedStateHandle: SavedStateHandle,
 ): BaseFlowViewModel<NicknameScreen>(flowRouter) {

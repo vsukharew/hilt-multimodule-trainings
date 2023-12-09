@@ -8,7 +8,7 @@ import dagger.hilt.android.scopes.ViewModelScoped
 
 @Module
 @InstallIn(ViewModelComponent::class)
-interface CalendarImplModule {
+internal interface CalendarImplModule {
     @Binds
     @ViewModelScoped
     fun bindCalendarInteractor(impl: CalendarInteractorImpl): CalendarInteractor

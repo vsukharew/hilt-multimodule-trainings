@@ -8,7 +8,7 @@ import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class CalendarFragment : Fragment(R.layout.fragment_calendar) {
+internal class CalendarFragment : Fragment(R.layout.fragment_calendar) {
 
     private val viewModel by viewModels<CalendarViewModel>()
 

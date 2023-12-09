@@ -24,7 +24,7 @@ import javax.inject.Inject
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 @AndroidEntryPoint
-class OrderFlowFragment : BaseFlowFragment<EmailScreen, OrderFlowViewModel>(R.layout.fragment_order_flow) {
+internal class OrderFlowFragment : BaseFlowFragment<EmailScreen, OrderFlowViewModel>(R.layout.fragment_order_flow) {
 
     private var _binding: FragmentOrderFlowBinding? = null
 

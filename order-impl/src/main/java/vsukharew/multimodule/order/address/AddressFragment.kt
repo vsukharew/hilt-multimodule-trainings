@@ -18,7 +18,7 @@ import vsukharew.multimodule.order.flow.di.OrderFlowEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class AddressFragment : Fragment(R.layout.fragment_address) {
+internal class AddressFragment : Fragment(R.layout.fragment_address) {
     private var _binding: FragmentAddressBinding? = null
     private val binding
         get() = _binding!!

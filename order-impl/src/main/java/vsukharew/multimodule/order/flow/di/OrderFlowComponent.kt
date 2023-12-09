@@ -6,7 +6,7 @@ import vsukharew.multimodule.di.PerFeature
 
 @PerFeature
 @DefineComponent(parent = SingletonComponent::class)
-interface OrderFlowComponent {
+internal interface OrderFlowComponent {
     @DefineComponent.Builder
     interface Builder {
         fun build(): OrderFlowComponent

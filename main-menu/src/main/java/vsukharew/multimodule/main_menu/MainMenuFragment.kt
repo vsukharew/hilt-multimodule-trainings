@@ -10,7 +10,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import vsukharew.multimodule.main_menu.databinding.FragmentMainMenuBinding
 
 @AndroidEntryPoint
-class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {
+internal class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {
 
     private var _binding: FragmentMainMenuBinding? = null
 

@@ -10,7 +10,7 @@ import vsukharew.multimodule.di.Flow
 
 @Module
 @InstallIn(OrderFlowComponent::class)
-object InnerNavigationModule {
+internal object InnerNavigationModule {
     @Provides
     @PerFeature
     @Flow

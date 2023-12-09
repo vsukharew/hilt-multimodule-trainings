@@ -10,7 +10,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class NavigationModule {
+internal class NavigationModule {
     @Provides
     @Singleton
     fun provideCicerone(): Cicerone<Router> = Cicerone.create()
