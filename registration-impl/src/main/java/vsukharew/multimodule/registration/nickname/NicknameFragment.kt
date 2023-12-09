@@ -15,6 +15,7 @@ import vsukharew.multimodule.registration.R
 import vsukharew.multimodule.registration.flow.di.RegistrationFlowEntryPoint
 import vsukharew.multimodule.registration.databinding.FragmentNicknameBinding
 import vsukharew.multimodule.registration.flow.di.RegistrationFlowComponentHolder
+import vsukharew.multimodule.ui.factoryCast
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -41,7 +42,7 @@ internal class NicknameFragment : Fragment(R.layout.fragment_nickname) {
                 return entryPoint.run {
                     NicknameViewModel(
                         flowRouter(),
-                    ) as T
+                    ).factoryCast()
                 }
             }
         }

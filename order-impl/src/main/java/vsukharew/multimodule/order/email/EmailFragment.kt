@@ -15,6 +15,7 @@ import vsukharew.multimodule.order.R
 import vsukharew.multimodule.order.databinding.FragmentEmailBinding
 import vsukharew.multimodule.order.flow.di.OrderFlowComponentHolder
 import vsukharew.multimodule.order.flow.di.OrderFlowEntryPoint
+import vsukharew.multimodule.ui.factoryCast
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -42,7 +43,7 @@ internal class EmailFragment : Fragment(R.layout.fragment_email) {
                     EmailViewModel(
                         globalRouter(),
                         flowRouter()
-                    ) as T
+                    ).factoryCast()
                 }
             }
         }

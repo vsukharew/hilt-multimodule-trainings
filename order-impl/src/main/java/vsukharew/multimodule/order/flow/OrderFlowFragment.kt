@@ -18,6 +18,7 @@ import vsukharew.multimodule.order.email.EmailScreen
 import vsukharew.multimodule.order.flow.di.OrderFlowComponentHolder
 import vsukharew.multimodule.order.flow.di.OrderFlowEntryPoint
 import vsukharew.multimodule.ui.BaseFlowFragment
+import vsukharew.multimodule.ui.factoryCast
 import javax.inject.Inject
 
 /**
@@ -53,7 +54,7 @@ internal class OrderFlowFragment : BaseFlowFragment<EmailScreen, OrderFlowViewMo
                 return entryPoint.run {
                     OrderFlowViewModel(
                         flowRouter()
-                    ) as T
+                    ).factoryCast()
                 }
             }
         }

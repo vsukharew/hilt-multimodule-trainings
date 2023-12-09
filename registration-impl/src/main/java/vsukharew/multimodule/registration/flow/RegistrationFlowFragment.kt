@@ -17,6 +17,7 @@ import vsukharew.multimodule.registration.flow.di.RegistrationFlowComponentHolde
 import vsukharew.multimodule.registration.flow.di.RegistrationFlowEntryPoint
 import vsukharew.multimodule.registration.nickname.NicknameScreen
 import vsukharew.multimodule.ui.BaseFlowFragment
+import vsukharew.multimodule.ui.factoryCast
 import javax.inject.Inject
 
 /**
@@ -55,7 +56,7 @@ internal class RegistrationFlowFragment :
                     RegistrationFlowViewModel(
                         flowRouter(),
                         handle
-                    ) as T
+                    ).factoryCast()
                 }
             }
         }
