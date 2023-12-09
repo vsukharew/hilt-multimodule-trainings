@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.github.terrakok.cicerone.Router
 import vsukharew.multimodule.order.address.AddressScreen
 
-class EmailViewModel(
+internal class EmailViewModel(
     private val flowRouter: Router,
 ) : ViewModel() {
 

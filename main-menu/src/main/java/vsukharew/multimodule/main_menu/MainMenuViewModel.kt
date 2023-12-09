@@ -8,7 +8,7 @@ import vsukharew.multimodule.navigationapi.RegistrationRouter
 import javax.inject.Inject
 
 @HiltViewModel
-class MainMenuViewModel @Inject constructor(
+internal class MainMenuViewModel @Inject constructor(
     private val calendarRouter: CalendarRouter,
     private val orderRouter: OrderRouter,
     private val registrationRouter: RegistrationRouter,

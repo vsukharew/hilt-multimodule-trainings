@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentFactory
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 import vsukharew.multimodule.calendar.CalendarFragment
 
-class CalendarScreen : FragmentScreen {
+internal class CalendarScreen : FragmentScreen {
     override fun createFragment(factory: FragmentFactory): Fragment {
         return CalendarFragment()
     }

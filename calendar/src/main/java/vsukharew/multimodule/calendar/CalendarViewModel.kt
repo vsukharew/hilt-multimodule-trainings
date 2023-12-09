@@ -6,7 +6,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class CalendarViewModel @Inject constructor(
+internal class CalendarViewModel @Inject constructor(
     private val router: Router,
 ) : ViewModel() {
     fun back() {

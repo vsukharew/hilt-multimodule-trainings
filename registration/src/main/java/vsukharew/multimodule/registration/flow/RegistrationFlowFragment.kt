@@ -23,7 +23,7 @@ import javax.inject.Inject
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
 @AndroidEntryPoint
-class RegistrationFlowFragment :
+internal class RegistrationFlowFragment :
     BaseFlowFragment<NicknameScreen, RegistrationFlowViewModel>(R.layout.fragment_registration_flow) {
 
     private var _binding: FragmentRegistrationFlowBinding? = null

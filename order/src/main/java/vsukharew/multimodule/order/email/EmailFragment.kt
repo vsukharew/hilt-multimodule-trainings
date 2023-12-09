@@ -18,7 +18,7 @@ import vsukharew.multimodule.order.flow.di.OrderFlowEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class EmailFragment : Fragment(R.layout.fragment_email) {
+internal class EmailFragment : Fragment(R.layout.fragment_email) {
 
     private var _binding: FragmentEmailBinding? = null
     private val binding

@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
 import com.github.terrakok.cicerone.androidx.FragmentScreen
 
-class RegistrationFlowScreen : FragmentScreen {
+internal class RegistrationFlowScreen : FragmentScreen {
     override fun createFragment(factory: FragmentFactory): Fragment {
         return RegistrationFlowFragment()
     }

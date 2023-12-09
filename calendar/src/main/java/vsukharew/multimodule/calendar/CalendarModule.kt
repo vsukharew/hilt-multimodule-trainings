@@ -9,7 +9,7 @@ import vsukharew.multimodule.navigationapi.CalendarRouter
 
 @Module
 @InstallIn(ViewModelComponent::class)
-interface CalendarModule {
+internal interface CalendarModule {
     @Binds
     @ViewModelScoped
     fun bindCalendarInteractor(impl: CalendarInteractorImpl): CalendarInteractor

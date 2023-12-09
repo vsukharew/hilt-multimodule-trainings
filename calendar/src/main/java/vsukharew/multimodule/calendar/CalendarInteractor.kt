@@ -1,3 +1,3 @@
 package vsukharew.multimodule.calendar
 
-interface CalendarInteractor
+internal interface CalendarInteractor

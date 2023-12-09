@@ -9,7 +9,7 @@ import vsukharew.multimodule.di.Flow
 
 @EntryPoint
 @InstallIn(OrderFlowComponent::class)
-interface OrderFlowEntryPoint {
+internal interface OrderFlowEntryPoint {
     fun globalRouter(): Router
     fun profileRepo(): ProfileRepo
 

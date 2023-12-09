@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.github.terrakok.cicerone.Router
 import vsukharew.multimodule.registration.birthdate.BirthDateScreen
 
-class NicknameViewModel(
+internal class NicknameViewModel(
     private val flowRouter: Router,
     private val globalRouter: Router,
 ) : ViewModel() {

@@ -4,7 +4,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class RegistrationFlowComponentHolder @Inject constructor(
+internal class RegistrationFlowComponentHolder @Inject constructor(
     private val registrationFlowComponentBuilder: RegistrationFlowComponent.Builder,
 ) {
     private var registrationFlowComponent: RegistrationFlowComponent? = null

@@ -18,7 +18,7 @@ import vsukharew.multimodule.registration.flow.di.RegistrationFlowEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class BirthDateFragment : Fragment(R.layout.fragment_birthdate) {
+internal class BirthDateFragment : Fragment(R.layout.fragment_birthdate) {
 
     private var _binding: FragmentBirthdateBinding? = null
     private val binding

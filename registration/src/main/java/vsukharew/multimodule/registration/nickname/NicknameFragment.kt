@@ -18,7 +18,7 @@ import vsukharew.multimodule.registration.flow.di.RegistrationFlowComponentHolde
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class NicknameFragment : Fragment(R.layout.fragment_nickname) {
+internal class NicknameFragment : Fragment(R.layout.fragment_nickname) {
 
     private var _binding: FragmentNicknameBinding? = null
     private val binding
