@@ -15,6 +15,7 @@ import vsukharew.multimodule.order.R
 import vsukharew.multimodule.order.databinding.FragmentAddressBinding
 import vsukharew.multimodule.order.flow.di.OrderFlowComponentHolder
 import vsukharew.multimodule.order.flow.di.OrderFlowEntryPoint
+import vsukharew.multimodule.ui.factoryCast
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -40,7 +41,7 @@ internal class AddressFragment : Fragment(R.layout.fragment_address) {
                 return entryPoint.run {
                     AddressViewModel(
                         globalRouter()
-                    ) as T
+                    ).factoryCast()
                 }
             }
         }

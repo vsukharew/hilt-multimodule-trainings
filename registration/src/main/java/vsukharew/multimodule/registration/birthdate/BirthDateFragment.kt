@@ -15,6 +15,7 @@ import vsukharew.multimodule.registration.R
 import vsukharew.multimodule.registration.databinding.FragmentBirthdateBinding
 import vsukharew.multimodule.registration.flow.di.RegistrationFlowComponentHolder
 import vsukharew.multimodule.registration.flow.di.RegistrationFlowEntryPoint
+import vsukharew.multimodule.ui.factoryCast
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -38,7 +39,7 @@ internal class BirthDateFragment : Fragment(R.layout.fragment_birthdate) {
                 return entryPoint.run {
                     BirthDateViewModel(
                         globalRouter(),
-                    ) as T
+                    ).factoryCast()
                 }
             }
         }
