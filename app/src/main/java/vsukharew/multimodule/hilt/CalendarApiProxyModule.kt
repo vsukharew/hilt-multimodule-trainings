@@ -18,8 +18,9 @@ internal class CalendarApiProxyModule {
     @Provides
     @ViewModelScoped
     fun calendarNavigationApiComponent(cicerone: Cicerone<Router>): CalendarApiComponent {
-        return DaggerCalendarApiComponent.factory()
-            .create(cicerone.router)
+        return DaggerCalendarApiComponent.builder()
+            .router(cicerone.router)
+            .build()
     }
 
     @Provides

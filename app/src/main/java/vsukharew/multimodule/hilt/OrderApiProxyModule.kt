@@ -17,8 +17,9 @@ internal object OrderApiProxyModule {
     @Provides
     @ViewModelScoped
     fun provideOrderFlowApiComponent(cicerone: Cicerone<Router>): OrderApiComponent {
-        return DaggerOrderApiComponent.factory()
-            .create(cicerone.router)
+        return DaggerOrderApiComponent.builder()
+            .router(cicerone.router)
+            .build()
     }
 
     @Provides

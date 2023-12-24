@@ -8,9 +8,5 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [OrderApiModule::class], dependencies = [Router::class])
 interface OrderApiComponent {
-    @Component.Factory
-    interface Factory {
-        fun create(router: Router): OrderApiComponent
-    }
     fun orderRouter(): OrderRouter
 }

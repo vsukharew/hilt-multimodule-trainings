@@ -8,9 +8,5 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [CalendarApiModule::class], dependencies = [Router::class])
 interface CalendarApiComponent {
-    @Component.Factory
-    interface Factory {
-        fun create(router: Router): CalendarApiComponent
-    }
     fun calendarRouter(): CalendarRouter
 }

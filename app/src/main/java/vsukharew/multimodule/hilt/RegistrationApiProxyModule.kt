@@ -17,8 +17,9 @@ object RegistrationApiProxyModule {
     @Provides
     @ViewModelScoped
     fun provideRegistrationRouterComponent(cicerone: Cicerone<Router>): RegistrationApiComponent {
-        return DaggerRegistrationApiComponent.factory()
-            .create(cicerone.router)
+        return DaggerRegistrationApiComponent.builder()
+            .router(cicerone.router)
+            .build()
     }
 
     @Provides

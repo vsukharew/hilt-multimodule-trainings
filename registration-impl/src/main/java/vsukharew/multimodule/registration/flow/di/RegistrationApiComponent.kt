@@ -8,9 +8,5 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [RegistrationApiModule::class], dependencies = [Router::class])
 interface RegistrationApiComponent {
-    @Component.Factory
-    interface Factory {
-        fun create(router: Router): RegistrationApiComponent
-    }
     fun registrationRouter(): RegistrationRouter
 }
